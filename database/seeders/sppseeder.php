@@ -16,8 +16,9 @@ class sppseeder extends Seeder
     {
         //
         DB::table('spps')->insert([
-            'tahun'=>random_int(1000,3000),
-            'nominal'=>random_int(1,1000000),
+            "id_spp" => random_int(1,20),
+            "tahun"=>random_int(1000,3000),
+            "nominal"=>random_int(1,1000000),
         ]);
     }
 }
