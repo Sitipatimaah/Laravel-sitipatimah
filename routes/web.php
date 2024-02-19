@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KelasController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SppController;
 
@@ -13,7 +14,7 @@ use App\Http\Controllers\SppController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+ 
 Route::get('/layout', function () {
     return view('layout.master');
 });
@@ -31,3 +32,5 @@ Route::controller(SppController::class)->group(function () {
     Route::put('/spp/{id}', 'update')->name('spp.update');
     Route::delete('/spp/{id}','destroy')->name('spp.destroy');
 });
+
+Route::resource('/kelas', KelasController::class);

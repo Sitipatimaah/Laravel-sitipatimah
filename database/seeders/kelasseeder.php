@@ -15,7 +15,7 @@ class kelasseeder extends Seeder
     public function run(): void
     {
         //
-        \DB::table("kelass")->insert([
+        \DB::table("kelases")->insert([
             'nama_kelas'=> str::random(10),
             'kompetensi_keahlian'=> str::random(50),
         ]);

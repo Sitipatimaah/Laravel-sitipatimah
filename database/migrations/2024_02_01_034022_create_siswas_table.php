@@ -15,7 +15,7 @@ return new class extends Migration
             $table->char('nisn', 10)->primary();
             $table->char('nis', 8);
             $table->string('nama', 35);
-            $table->foreignId('id_kelas')->references('id')->on('kelass');
+            $table->foreignId('id_kelas')->references('id')->on('kelases');
             $table->text('alamat');
             $table->char('no_telp', 13);
             $table->foreignId('id_spp')->references('id_spp')->on('spps');
